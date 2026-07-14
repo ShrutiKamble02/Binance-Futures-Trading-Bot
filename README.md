@@ -1,6 +1,6 @@
 # Binance Futures Trading Bot
 
-A Python-based command-line trading bot that places Market and Limit orders on the Binance Futures Testnet using the official Binance API.
+A modular Python command-line trading bot that interacts with the Binance Futures Testnet API to place Market and Limit orders. The project demonstrates API integration, CLI design, input validation, logging, and exception handling.
 
 ---
 
@@ -19,24 +19,23 @@ A Python-based command-line trading bot that places Market and Limit orders on t
 
 ## Project Structure
 
-```
+```text
 TradingBotAssignment/
 │
 ├── bot/
+│   ├── __init__.py
 │   ├── client.py
-│   ├── order.py
-│   ├── validator.py
+│   ├── cli.py
 │   ├── logging_config.py
-│   └── __init__.py
+│   ├── orders.py
+│   └── validators.py
 │
 ├── logs/
-│   └── trading.log
 │
-├── .env
-├── main.py
-├── requirements.txt
+├── .gitignore
 ├── README.md
-└── test_connection.py
+├── requirements.txt
+└── main.py
 ```
 
 ---
@@ -46,13 +45,13 @@ TradingBotAssignment/
 Clone the repository
 
 ```bash
-git clone https://github.com/ShrutiKamble02/TradingBotAssignment.git
+git clone https://github.com/ShrutiKamble02/Binance-Futures-Trading-Bot.git
 ```
 
 Move into project directory
 
 ```bash
-cd TradingBotAssignment
+cd Binance-Futures-Trading-Bot
 ```
 
 Create virtual environment
@@ -87,8 +86,9 @@ pip install -r requirements.txt
 
 Create a `.env` file in the project root.
 
-BINANCE_API_KEY=AsJyKw9bo5qKAwa7BUL509cTngROmHd6z4tedYjum13Y6ZuMLddGiwSu3S1inlSi
-BINANCE_API_SECRET=ta50yAeIKU26A3YyPtFWfc6foZ5GrtIOaIb6vINobwi1qBv2CJaBZB8i3dGoBJR7
+```env
+BINANCE_API_KEY=YOUR_API_KEY
+BINANCE_API_SECRET=YOUR_API_SECRET
 BASE_URL=https://testnet.binancefuture.com
 
 ---
@@ -150,6 +150,7 @@ The application handles:
 
 ---
 
+
 ## Technologies Used
 
 - Python 3.x
@@ -157,14 +158,15 @@ The application handles:
 - python-dotenv
 - argparse
 - logging
-
----
+- Git & GitHub
 
 ## Notes
 
-This project is configured for Binance Futures Testnet/Demo Trading. Valid API credentials with appropriate permissions are required to place live test orders.
+This project is designed for the Binance Futures Testnet. A valid Testnet API Key and Secret are required to execute authenticated API requests.
 
----
+## License
+
+This project was developed as part of an internship assessment and is intended for educational purposes.
 
 ## Author
 
